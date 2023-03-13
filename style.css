@@ -1,0 +1,116 @@
+body {
+  box-sizing: border-box;
+  background-color: black;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-size: 20px;
+}
+
+.container {
+  max-width: 100vw;
+}
+
+.main {
+  background-color: rgb(95, 88, 88);
+  margin: 10vw 10vw;
+  padding: 10vw 10vw;
+}
+
+.slider:hover span {
+  display: inline-block;
+}
+
+.slider:hover {
+  color: white;
+  transition: 0.3s;
+}
+
+label {
+  cursor: pointer;
+}
+
+.phrase {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+img {
+  display: block;
+  width: 0;
+  margin: 1vh auto;
+  transition: 0.5s;
+  opacity: 0;
+}
+
+input {
+  display: none;
+}
+
+#slide1:checked ~ .slider > .slide1 img,
+#slide2:checked ~ .slider > .slide2 img,
+#slide3:checked ~ .slider > .slide3 img,
+#slide4:checked ~ .slider > .slide4 img,
+#slide5:checked ~ .slider > .slide5 img {
+  width: 200px;
+  transition: 0.5s;
+  opacity: 1;
+}
+
+.slider {
+  color: white;
+}
+
+#slide1:checked ~ .slider > .slide1,
+#slide2:checked ~ .slider > .slide2,
+#slide3:checked ~ .slider > .slide3,
+#slide4:checked ~ .slider > .slide4,
+#slide5:checked ~ .slider > .slide5 {
+  color: rgb(106, 146, 122);
+  transition: 0.3s;
+}
+
+.slider:hover ~ .slide1{
+  color: white;
+}
+
+
+span {
+  font-weight: 700;
+  font-size: 30px;
+  transform: rotate(0deg);
+  display: none;
+}
+
+#slide1:checked ~ .slider > .slide1 span,
+#slide2:checked ~ .slider > .slide2 span,
+#slide3:checked ~ .slider > .slide3 span,
+#slide4:checked ~ .slider > .slide4 span,
+#slide5:checked ~ .slider > .slide5 span {
+  transform: rotate(135deg);
+  transition: 0.3s;
+  font-size: 32px;
+}
+
+#slide1:hover ~ .slider > .slide1 span,
+#slide2:hover ~ .slider > .slide2 span,
+#slide3:hover ~ .slider > .slide3 span,
+#slide4:hover ~ .slider > .slide4 span,
+#slide5:hover ~ .slider > .slide5 span {
+  transform: rotate(135deg);
+  transition: 0.3s;
+  font-size: 32px;
+}
+
+
+
+#slide1:hover ~ .slider > .slide1 img,
+#slide2:hover ~ .slider > .slide2 img,
+#slide3:hover ~ .slider > .slide3 img,
+#slide4:hover ~ .slider > .slide4 img,
+#slide5:hover ~ .slider > .slide5 img {
+  display: block;
+  width: 200px;
+  opacity: 1;
+  transition: 0.4s;
+}
+
