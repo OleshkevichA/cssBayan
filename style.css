@@ -51,7 +51,7 @@ input {
 #slide3:checked ~ .slider > .slide3 img,
 #slide4:checked ~ .slider > .slide4 img,
 #slide5:checked ~ .slider > .slide5 img {
-  width: 200px;
+  width: 30vw;
   transition: 0.5s;
   opacity: 1;
 }
@@ -64,9 +64,19 @@ input {
 #slide2:checked ~ .slider > .slide2,
 #slide3:checked ~ .slider > .slide3,
 #slide4:checked ~ .slider > .slide4,
-#slide5:checked ~ .slider > .slide5 {
+#slide5:checked ~ .slider > .slide5{
   color: rgb(106, 146, 122);
   transition: 0.3s;
+}
+
+#slide1:checked ~ .slider > .slide1 span,
+#slide2:checked ~ .slider > .slide2 span,
+#slide3:checked ~ .slider > .slide3 span,
+#slide4:checked ~ .slider > .slide4 span,
+#slide5:checked ~ .slider > .slide5 span{
+  color: rgb(106, 146, 122);
+  transition: 0.3s;
+  font-size: 3vw;
 }
 
 .slider:hover ~ .slide1{
@@ -76,7 +86,7 @@ input {
 
 span {
   font-weight: 700;
-  font-size: 30px;
+  font-size: 3vw;
   transform: rotate(0deg);
   display: none;
 }
@@ -88,7 +98,7 @@ span {
 #slide5:checked ~ .slider > .slide5 span {
   transform: rotate(135deg);
   transition: 0.3s;
-  font-size: 32px;
+  font-size: 3vw;
 }
 
 #slide1:hover ~ .slider > .slide1 span,
@@ -98,7 +108,7 @@ span {
 #slide5:hover ~ .slider > .slide5 span {
   transform: rotate(135deg);
   transition: 0.3s;
-  font-size: 32px;
+  font-size: 3vw;
 }
 
 
@@ -109,8 +119,66 @@ span {
 #slide4:hover ~ .slider > .slide4 img,
 #slide5:hover ~ .slider > .slide5 img {
   display: block;
-  width: 200px;
+  width: 30vw;
   opacity: 1;
   transition: 0.4s;
 }
 
+
+
+@media (min-width: 1920px){
+  body {
+    font-size: 3rem;
+  }
+}
+
+@media (max-width: 1919px){
+  body {
+    font-size: 2rem;
+  }
+}
+
+@media (max-width: 1000px){
+  body {
+    font-size: 1.5rem;
+  }
+}
+
+@media (max-width: 720px){
+  body {
+    font-size: 1rem;
+  }
+
+  span {
+    font-size: 5vw;
+  }
+
+  #slide1:checked ~ .slider > .slide1 span,
+  #slide2:checked ~ .slider > .slide2 span,
+  #slide3:checked ~ .slider > .slide3 span,
+  #slide4:checked ~ .slider > .slide4 span,
+  #slide5:checked ~ .slider > .slide5 span {
+    transform: rotate(135deg);
+    transition: 0.3s;
+    font-size: 3vw;
+  }
+
+  #slide1:hover ~ .slider > .slide1 span,
+  #slide2:hover ~ .slider > .slide2 span,
+  #slide3:hover ~ .slider > .slide3 span,
+  #slide4:hover ~ .slider > .slide4 span,
+  #slide5:hover ~ .slider > .slide5 span {
+  transform: rotate(135deg);
+  transition: 0.3s;
+  font-size: 5vw;
+}
+
+  #slide1:checked ~ .slider > .slide1 span,
+  #slide2:checked ~ .slider > .slide2 span,
+  #slide3:checked ~ .slider > .slide3 span,
+  #slide4:checked ~ .slider > .slide4 span,
+  #slide5:checked ~ .slider > .slide5 span{
+    font-size: 5vw;
+  }
+
+}
